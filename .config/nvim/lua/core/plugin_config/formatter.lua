@@ -54,7 +54,25 @@ require("formatter").setup({
 			end,
 		},
 		lua = {
-			require("formatter.filetypes.lua").stylua,
+			-- require("formatter.filetypes.lua").stylua,
+			function()
+				return {
+					exe = "stylua",
+					args = {
+                        "--indent-type Spaces",
+                        "--indent-width 4",
+                        "--line-endings Unix",
+                        "--sort-requires",
+                        "--search-parent-directories",
+                        "--stdin-filepath",
+                        util.escape_path(util.get_current_buffer_file_path()),
+                        "--",
+                        "-",
+					},
+					stdin = true,
+					try_node_modules = true,
+				}
+			end,
 		},
 		json = {
 			require("formatter.filetypes.json").prettierd,
