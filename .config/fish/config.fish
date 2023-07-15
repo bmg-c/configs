@@ -6,6 +6,8 @@ function fish_greeting
     nitch
 end
 
+set SHELL /bin/sh
+
 alias nvim="nvim"
 alias neovim="nvim"
 alias vim="nvim"
