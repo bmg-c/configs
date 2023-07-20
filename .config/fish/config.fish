@@ -12,6 +12,6 @@ alias nvim="nvim"
 alias neovim="nvim"
 alias vim="nvim"
 alias vi="nvim"
-alias sudo="doas"
+# alias sudo="doas"
 
 theme_gruvbox dark soft
